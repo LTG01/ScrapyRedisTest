@@ -150,7 +150,7 @@ class Scheduler(object):
         self.df.clear()
         self.queue.clear()
 
-    def enqueue_request(self, request):
+    def enqueue_request(self, request): 
         if not request.dont_filter and self.df.request_seen(request):
             self.df.log(request, self.spider)
             return False
